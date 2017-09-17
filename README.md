@@ -21,11 +21,12 @@ Membro dello staff Trenitalia che si occupa di verificare l’occupazione dei po
 
 
 ## Soluzione proposta
+Il progetto TrenoFacile si propone come un insieme di funzionalità da integrare nell’attuale applicazione mobile Trenitalia.
 
-Viene proposta e dettagliata una soluzione che integri:
+In particolare:
 
 Per i passeggeri
-- Una ‘nuova’ applicazione Trenitalia
+- Un arricchimento dell'applicazione Trenitalia con nuove funzionalità
 - Un chatbot Facebook Messenger
 
 Il cui scopo è rendere più piacevole e completa l’esperienza di viaggio con Trenitalia.
@@ -37,27 +38,31 @@ Per lo staff Trenitalia
 Il cui scopo è snellire e rendere efficaci le procedure di controllo a bordo treno.
 
 
-## Nuova applicazione Trenitalia (per i passeggeri)
-
+## Applicazione Trenitalia (per i passeggeri)
 La nuova applicazione, oltre a fornire le funzionalità già presenti, è pensata per:
 - Realizzare check-in automatico a bordo treno
 - Offrire interazione vocale con il nuovo sistema TrenoFacile (conoscere stato del treno, ottenere offerte di prodotti ancillari al viaggio)
 - Richiedere l'intervento di un controllore a bordo treno per un problema con il viaggio
 
 ### Check-in automatico
-L’applicazione, installata sullo smartphone del passeggero che ha acquistato un biglietto, invierà la posizione del passeggero il giorno del viaggio e all’approssimarsi dell’orario di partenza. Il monitoring continuerà fino a tot minuti dalla partenza del treno per assicurarsi che il passeggero sia effettivamente sul treno, dopo di che verrà inviata (in automatico e senza azioni da parte del passeggero) la richiesta di check-in al server per confermare che il passeggero si trovi a bordo.
+L’applicazione, installata sullo smartphone del passeggero che ha acquistato un biglietto, invierà la posizione del passeggero il giorno del viaggio e all’approssimarsi dell’orario di partenza. Il monitoring continuerà fino a tot minuti dalla partenza del treno per assicurarsi che il passeggero sia effettivamente su di esso. Dopo di che verrà inviata, in automatico e senza azioni da parte del passeggero, la richiesta di check-in al server per confermare che il passeggero si trovi a bordo. Ad operazione completata l’utente riceverà una notifica di benvenuto a bordo che lo inviterà ad aprire la dashboard di viaggio.
+
+Vantaggi del check-in automatico:
+- Minore interazione utente-controllore
+- Miglioramento delle statistiche di traffico per i treni regionali
+- Invalidazione dei biglietti su treni regionali
 
 ### Reminder di check-in
 Se l’applicazione è installata sullo smartphone del passeggero ma NON è stata data la possibilità di accedere alla posizione del GPS, l’applicazione, tenendo conto della lista di biglietti acquistati, invierà una notifica push entro pochi minuti dall’orario di partenza del treno, per ricordare al passeggero che può effettuare il check-in in maniera autonoma per quel singolo viaggio.
 
-### Promozione di prodotti ancillari
-Per i passeggeri che avranno completato il check-in, l’applicazione potrà fornire informazioni relative a prodotti ancillari al viaggio, sia a bordo treno che post-viaggio (es. menù del bistrot o del ristorante a bordo, offerta di hotel, taxi o servizi nella città di destinazione, elenco di eventi interessanti nella città di destinazione nel periodo di viaggio).
+### Dashboard di viaggio
+Per i passeggeri che avranno completato il check-in, l’applicazione potrà fornire informazioni relative al treno e proporre prodotti ancillari, sia a bordo treno che post-viaggio (es. menù del bistrot o del ristorante a bordo, offerta di hotel, taxi o servizi nella città di destinazione, elenco di eventi interessanti nella città di destinazione nel periodo di viaggio).
+I suggerimenti riguardo i prodotti ancillari saranno profilate rispetto a parametri quali le preferenze dell’utente, lo storico viaggi, dati ricavati dai social network, etc.
 
-### Interazione vocale
-Sfruttando le API speech2text offerte dagli smartphone di recente generazione, il passeggero potrà interagire con l’applicazione anche mediante voce, per azioni quali:
-- Recupero dell’elenco di biglietti
-- Recupero dello stato di un treno
-- Check-in volontario a bordo treno
+### A portata di voce
+Sfruttando le API speech2text offerte dagli smartphone di recente generazione (Siri, Google Now ecc) sarà possibile richiedere a bordo treno informazioni su viaggio, dopo aver effettuato il check-in.
+
+Ad esempio sarà possibile fare domande quali ‘A che velocità stiamo andando?’, ‘Che cosa mi offre il bar di bordo?’ oppure ‘Prenota un taxi a Milano per l’orario di arrivo’ semplicemente interagendo con il proprio smartphone.
 
 ## Chatbot Facebook Messenger (per i passeggeri)
 Per coloro i quali non abbiano a disposizione uno smartphone compatibile con l’applicazione o non vogliano installarla, viene offerto un chatbot su Facebook Messenger in grado di fornire, mediante messaggi di testo, le stesse funzionalità ottenute tramite l’interazione vocale della nuova applicazione.
